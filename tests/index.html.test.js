@@ -30,20 +30,22 @@ describe('index.html', () => {
 
   it('renders a button element', () => {
     expect(container.querySelector('button')).not.toBeNull()
-    expect(getByText(container, 'Click me')).toBeInTheDocument()
+    expect(getByText(container, 'Click me for a terrible pun')).toBeInTheDocument()
   })
 
   it('renders a new paragraph via JavaScript when the button is clicked', async () => {
-    fireEvent.click(getByText(container, 'Click me'))
-    let generatedParagraphs = await findAllByText(container, 'This is a new paragraph.')
+    const button = getByText(container, 'Click me for a terrible pun')
+    
+    fireEvent.click(button)
+    let generatedParagraphs = container.querySelectorAll('#pun-container p')
     expect(generatedParagraphs.length).toBe(1)
 
-    fireEvent.click(getByText(container, 'Click me'))
-    generatedParagraphs = await findAllByText(container, 'This is a new paragraph.')
+    fireEvent.click(button)
+    generatedParagraphs = container.querySelectorAll('#pun-container p')
     expect(generatedParagraphs.length).toBe(2)
 
-    fireEvent.click(getByText(container, 'Click me'))
-    generatedParagraphs = await findAllByText(container, 'This is a new paragraph.')
+    fireEvent.click(button)
+    generatedParagraphs = container.querySelectorAll('#pun-container p')
     expect(generatedParagraphs.length).toBe(3)
   })
 })

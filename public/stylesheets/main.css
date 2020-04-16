@@ -44,3 +44,12 @@
 .jumbotron .lang-logo img {
   max-width: 100%;
 }
+
+#pun-container {
+  margin-top: 32px;
+}
+
+#pun-container p {
+  font-size: 24px;
+  margin: 32px 0;
+}

@@ -15,23 +15,37 @@
       </div>
     </div>
     <main>
-      <div class="container">
+      <div class="container text-center">
         <div class="row">
-          <button class="btn btn-lg btn-primary">Click me</button>
-          <div id="results-container"></div>
+          <button class="btn btn-lg btn-primary">Click me for a terrible pun</button>
+        </div>
+        <div class="row">
+          <div id="pun-container"></div>
         </div>
       </div>
     </main>
 
     <script>
-      const appendNewParagraph = () => {
-        const p = document.createElement('p')
-        p.innerHTML = 'This is a new paragraph.'
-        document.querySelector('#results-container').appendChild(p)
-      }
+      (function() {
+        const puns = [
+          'My ceiling isn’t the best, but it’s up there.',
+          'I got fired from the calendar factory, just for taking a day off.',
+          'Q: What’s the best thing about Switzerland? A: Well, the flag is a big plus.',
+          'The past, present, and future walk into a bar. It was tense.',
+          'I tried to make a belt out of watches. It was a waist of time.',
+          'Why can’t Harry Potter tell the difference between his potion pot and his best friend? They’re both cauld ron.',
+        ]
+        let counter = 0
 
-      const button = document.querySelector('button')
-      button.addEventListener('click', appendNewParagraph)
+        const appendNewPun = () => {
+          const p = document.createElement('p')
+          p.innerHTML = puns[counter++] || "I'm all out of puns!"
+          document.querySelector('#pun-container').prepend(p)
+        }
+
+        const button = document.querySelector('button')
+        button.addEventListener('click', appendNewPun)
+      })()
     </script>
   </body>
 </html>
