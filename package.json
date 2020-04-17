@@ -7,6 +7,9 @@
   },
   "main": "index.js",
   "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chrome",
+    "cypress:test": "start-server-and-test start http://localhost:5000 cypress:run",
     "start": "node index.js",
     "test": "jest"
   },
@@ -20,7 +23,9 @@
     "@testing-library/dom": "^7.2.1",
     "@testing-library/jest-dom": "^5.5.0",
     "babel-jest": "^25.3.0",
-    "jest": "^25.3.0"
+    "cypress": "^4.4.0",
+    "jest": "^25.3.0",
+    "start-server-and-test": "^1.11.0"
   },
   "repository": {
     "type": "git",
