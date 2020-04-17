@@ -9,7 +9,7 @@
     "test": {
       "formation": {
         "test": {
-          "quantity": 1,
+          "quantity": 2,
           "size": "standard-1x"
         }
       }
