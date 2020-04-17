@@ -11,15 +11,15 @@
         "test": {
           "quantity": 1,
           "size": "standard-1x"
-        },
-        "buildpacks": [
-          { "url": "https://github.com/heroku/heroku-buildpack-google-chrome" },
-          { "url": "heroku/nodejs" }
-        ],
-        "scripts": {
-          "test": "npm test",
-          "cypress:test": "npm run cypress:test"
         }
+      },
+      "buildpacks": [
+        { "url": "https://github.com/heroku/heroku-buildpack-google-chrome" },
+        { "url": "heroku/nodejs" }
+      ],
+      "scripts": {
+        "test": "npm test",
+        "cypress:test": "npm run cypress:test"
       }
     }
   }
