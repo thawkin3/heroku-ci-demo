@@ -18,8 +18,7 @@
         { "url": "heroku/nodejs" }
       ],
       "scripts": {
-        "test": "npm test",
-        "cypress:test": "npm run cypress:test"
+        "test": "npm test && npm run cypress:test"
       }
     }
   }
