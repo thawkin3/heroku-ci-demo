@@ -19,8 +19,7 @@
         { "url": "heroku/nodejs" }
       ],
       "scripts": {
-        "test-setup": "cross-env CYPRESS_CACHE_FOLDER=./node_modules/cypress/cache/Cypress npx cypress cache path && cross-env CYPRESS_CACHE_FOLDER=./node_modules/cypress/cache/Cypress npx cypress cache list",
-        "test": "npm test && cross-env CYPRESS_CACHE_FOLDER=./node_modules/cypress/cache/Cypress npm run cypress:test"
+        "test": "npm test && npx cypress install && npm run cypress:test"
       }
     }
   }
