@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --headless",
+    "cypress:run": "cypress run --headless --browser electron",
     "cypress:test": "start-server-and-test start http://localhost:5000 cypress:run",
     "start": "cross-env PORT=5000 node index.js",
     "test": "jest"
