@@ -15,8 +15,9 @@
         }
       },
       "buildpacks": [
-        { "url": "heroku/nodejs" },
-        { "url": "https://github.com/heroku/heroku-buildpack-xvfb-google-chrome" }
+        { "url": "https://github.com/heroku/heroku-buildpack-xvfb-google-chrome" },
+        { "url" : "https://github.com/heroku/heroku-buildpack-apt" },
+        { "url": "heroku/nodejs" }
       ],
       "scripts": {
         "test": "npm test && npx cypress install && npm run cypress:test"
