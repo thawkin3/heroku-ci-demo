@@ -8,12 +8,13 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --headless --browser electron",
+    "cypress:run": "cypress run --browser chrome",
     "cypress:test": "start-server-and-test start http://localhost:5000 cypress:run",
     "start": "cross-env PORT=5000 node index.js",
     "test": "jest"
   },
   "dependencies": {
+    "cypress": "^3.5.0",
     "express": "^4.15.2",
     "regenerator-runtime": "^0.13.5"
   },
@@ -24,7 +25,6 @@
     "@testing-library/jest-dom": "^5.5.0",
     "babel-jest": "^25.3.0",
     "cross-env": "^7.0.2",
-    "cypress": "^4.4.0",
     "jest": "^25.3.0",
     "start-server-and-test": "^1.11.0"
   },
