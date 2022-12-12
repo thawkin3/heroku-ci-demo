@@ -14,7 +14,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "regenerator-runtime": "^0.13.5"
   },
   "devDependencies": {
